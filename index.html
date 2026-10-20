@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="portal.title">《可视化导论》课程门户</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="i18n.css" />
+  <script type="module" src="home-enhance.js"></script>
+  <script type="module" src="i18n.js"></script>
+</head>
+<body>
+
+  <!-- ========== Hero 区域 ========== -->
+  <header class="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-inner">
+      <p class="hero-tag">VISUALIZATION · INTRODUCTION</p>
+      <h1 data-i18n="portal.hero.h1">《可视化导论》</h1>
+      <p class="hero-subtitle" data-i18n="portal.hero.subtitle">从数据到图表：JavaScript + D3.js 实战课程</p>
+      <p class="hero-meta" data-i18n-html="portal.hero.meta">中国石油大学（华东）· 授课教师：<a href="https://cinger007.github.io" target="_blank" rel="noopener" class="teacher-link">李昕</a> · 主要参考教材：陈为《可视化导论》</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">5</span>
+          <span class="stat-label" data-lang="zh-CN">章</span>
+          <span class="stat-label" data-lang="en-US" hidden>Chapters</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">27</span>
+          <span class="stat-label" data-lang="zh-CN">小节</span>
+          <span class="stat-label" data-lang="en-US" hidden>Sections</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">20+</span>
+          <span class="stat-label" data-lang="zh-CN">交互演示</span>
+          <span class="stat-label" data-lang="en-US" hidden>Live Demos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" id="progress-count">0%</span>
+          <span class="stat-label" data-lang="zh-CN">学习进度</span>
+          <span class="stat-label" data-lang="en-US" hidden>Progress</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#chapters" class="btn-primary" data-lang="zh-CN">🚀 开始学习</a>
+        <a href="#chapters" class="btn-primary" data-lang="en-US" hidden>🚀 Start Learning</a>
+        <a href="#graph" class="btn-secondary" data-lang="zh-CN">🧭 知识图谱</a>
+        <a href="#graph" class="btn-secondary" data-lang="en-US" hidden>🧭 Knowledge Graph</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </header>
+
+  <!-- ========== 顶部导航 ========== -->
+  <nav class="nav">
+    <a href="#chapters" data-i18n="portal.nav.chapters">📚 章节</a>
+    <a href="#graph" data-lang="zh-CN">🧭 知识图谱</a>
+    <a href="#graph" data-lang="en-US" hidden>🧭 Graph</a>
+    <a href="#roadmap" data-lang="zh-CN">🗺️ 学习路线</a>
+    <a href="#roadmap" data-lang="en-US" hidden>🗺️ Roadmap</a>
+    <a href="#howto" data-i18n="portal.nav.howto">▶️ 使用方式</a>
+    <a href="#about" data-i18n="portal.nav.about">ℹ️ 关于</a>
+  </nav>
+
+  <!-- ========== 主体 ========== -->
+  <main>
+
+    <!-- ===== 课程路线图（时间轴）===== -->
+    <section id="roadmap" class="section">
+      <h2 data-lang="zh-CN">🗺️ 课程学习路线</h2>
+      <h2 data-lang="en-US" hidden>🗺️ Learning Roadmap</h2>
+      <p class="section-lead" data-lang="zh-CN">建议按顺序学习，前一章是后一章的基础。点击节点可快速跳转。</p>
+      <p class="section-lead" data-lang="en-US" hidden>Learn in order — each chapter builds on the previous. Click nodes to jump.</p>
+      <div class="roadmap" id="roadmap-container">
+        <!-- JS 动态生成 -->
+      </div>
+    </section>
+
+    <!-- ===== 章节卡片 ===== -->
+    <section id="chapters" class="section">
+      <h2 data-i18n="portal.tagline">📚 课程章节</h2>
+      <p class="section-lead" data-i18n="portal.intro">点击任一卡片进入该章节，每章节含 3 个 tab：📖 讲解 / ⌨️ 关键代码 / ▶️ 演示。</p>
+
+      <div class="cards">
+        <!-- 第 1 章 -->
+        <a class="card available" href="lesson-01/" data-lesson="lesson-01">
+          <div class="card-badge">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="80 120" class="progress-ring"/><text x="20" y="25" text-anchor="middle" font-size="14" font-weight="700">01</text></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <span class="card-num">第 1 章</span>
+              <span class="card-status">✅ 已上线</span>
+            </div>
+            <h3>数据</h3>
+            <p class="card-desc" data-i18n="card-01.desc"></p>
+            <div class="card-visual mini-chart" id="mini-chart-01">
+              <!-- JS 生成迷你图 -->
+            </div>
+            <ul class="card-tags">
+              <li>DIKW 金字塔</li>
+              <li>Stevens 4 尺度</li>
+              <li>D3 数据变换</li>
+              <li>Selection 三态</li>
+            </ul>
+            <div class="card-progress-bar"><div class="progress-fill"></div></div>
+            <div class="card-cta">
+              <span data-lang="zh-CN">进入章节 →</span>
+              <span data-lang="en-US" hidden>Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 第 2 章 -->
+        <a class="card available" href="lesson-02/" data-lesson="lesson-02">
+          <div class="card-badge">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="80 120" class="progress-ring"/><text x="20" y="25" text-anchor="middle" font-size="14" font-weight="700">02</text></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <span class="card-num">第 2 章</span>
+              <span class="card-status">✅ 已上线</span>
+            </div>
+            <h3>数据可视化流程</h3>
+            <p class="card-desc" data-i18n="card-02.desc"></p>
+            <div class="card-visual mini-chart" id="mini-chart-02"></div>
+            <ul class="card-tags">
+              <li>Card 模型</li>
+              <li>d3.rollup</li>
+              <li>Reingold-Tilford</li>
+              <li>事件委托</li>
+            </ul>
+            <div class="card-progress-bar"><div class="progress-fill"></div></div>
+            <div class="card-cta">
+              <span data-lang="zh-CN">进入章节 →</span>
+              <span data-lang="en-US" hidden>Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 第 3 章 -->
+        <a class="card available" href="lesson-03/" data-lesson="lesson-03">
+          <div class="card-badge">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="80 120" class="progress-ring"/><text x="20" y="25" text-anchor="middle" font-size="14" font-weight="700">03</text></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <span class="card-num">第 3 章</span>
+              <span class="card-status">✅ 已上线</span>
+            </div>
+            <h3>色彩专题</h3>
+            <p class="card-desc" data-i18n="card-03.desc"></p>
+            <div class="card-visual mini-chart" id="mini-chart-03"></div>
+            <ul class="card-tags">
+              <li>4 颜色空间</li>
+              <li>Wong / Paul Tol</li>
+              <li>5 大色系</li>
+              <li>CVD 论文图测</li>
+            </ul>
+            <div class="card-progress-bar"><div class="progress-fill"></div></div>
+            <div class="card-cta">
+              <span data-lang="zh-CN">进入章节 →</span>
+              <span data-lang="en-US" hidden>Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 第 4 章 -->
+        <a class="card available" href="lesson-04/" data-lesson="lesson-04">
+          <div class="card-badge">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="80 120" class="progress-ring"/><text x="20" y="25" text-anchor="middle" font-size="14" font-weight="700">04</text></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <span class="card-num">第 4 章</span>
+              <span class="card-status">✅ 已上线</span>
+            </div>
+            <h3>低维数据可视化</h3>
+            <p class="card-desc" data-i18n="card-04.desc"></p>
+            <div class="card-visual mini-chart" id="mini-chart-04"></div>
+            <ul class="card-tags">
+              <li>三层坐标变换</li>
+              <li>10 种曲线</li>
+              <li>Cleveland 45°</li>
+              <li>Marching Squares</li>
+            </ul>
+            <div class="card-progress-bar"><div class="progress-fill"></div></div>
+            <div class="card-cta">
+              <span data-lang="zh-CN">进入章节 →</span>
+              <span data-lang="en-US" hidden>Enter →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 第 5 章 -->
+        <a class="card available" href="lesson-05/" data-lesson="lesson-05">
+          <div class="card-badge">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="80 120" class="progress-ring"/><text x="20" y="25" text-anchor="middle" font-size="14" font-weight="700">05</text></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <span class="card-num">第 5 章</span>
+              <span class="card-status">✅ 已上线</span>
+            </div>
+            <h3>时序数据可视化</h3>
+            <p class="card-desc" data-i18n="card-05.desc"></p>
+            <div class="card-visual mini-chart" id="mini-chart-05"></div>
+            <ul class="card-tags">
+              <li>时间分解</li>
+              <li>日历 colormap</li>
+              <li>极坐标变换</li>
+              <li>Storygraph</li>
+            </ul>
+            <div class="card-progress-bar"><div class="progress-fill"></div></div>
+            <div class="card-cta">
+              <span data-lang="zh-CN">进入章节 →</span>
+              <span data-lang="en-US" hidden>Enter →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== 知识图谱 ===== -->
+    <section id="graph" class="section">
+      <h2 data-lang="zh-CN">🧭 课程知识图谱</h2>
+      <h2 data-lang="en-US" hidden>🧭 Knowledge Graph</h2>
+      <p class="section-lead" data-lang="zh-CN">拖拽节点探索知识点之间的关联关系。悬停高亮相关节点。</p>
+      <p class="section-lead" data-lang="en-US" hidden>Drag nodes to explore connections. Hover to highlight related nodes.</p>
+      <div class="graph-container" id="graph-container"></div>
+      <div class="graph-legend">
+        <span data-lang="zh-CN">颜色代表章节：</span>
+        <span data-lang="en-US" hidden>Colors = chapters:</span>
+        <span class="legend-chip" style="background:#6366f1">Ch1 数据</span>
+        <span class="legend-chip" style="background:#0ea5e9">Ch2 流程</span>
+        <span class="legend-chip" style="background:#f59e0b">Ch3 色彩</span>
+        <span class="legend-chip" style="background:#10b981">Ch4 低维</span>
+        <span class="legend-chip" style="background:#ef4444">Ch5 时序</span>
+      </div>
+    </section>
+
+    <!-- ===== 使用方式 ===== -->
+    <section id="howto" class="section">
+      <h2 data-i18n="portal.nav.howto">▶️ 使用方式</h2>
+      <div class="howto-grid">
+        <div class="howto-card">
+          <div class="howto-icon">🎓</div>
+          <h3 data-i18n="portal.usage.classroom.title">课堂讲解</h3>
+          <p data-i18n="portal.usage.classroom.desc"></p>
+        </div>
+        <div class="howto-card">
+          <div class="howto-icon">📖</div>
+          <h3 data-i18n="portal.usage.student.title">学生自学</h3>
+          <p data-i18n="portal.usage.student.desc"></p>
+        </div>
+        <div class="howto-card">
+          <div class="howto-icon">💻</div>
+          <h3 data-i18n="portal.usage.teacher.title">教师备课时</h3>
+          <p data-i18n="portal.usage.teacher.desc"></p>
+        </div>
+        <div class="howto-card">
+          <div class="howto-icon">📶</div>
+          <h3 data-i18n="portal.usage.lan.title">局域网使用</h3>
+          <p data-i18n="portal.usage.lan.desc"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 关于 ===== -->
+    <section id="about" class="section">
+      <h2 data-i18n="portal.nav.about">ℹ️ 关于本课程</h2>
+      <div class="about">
+        <div class="about-item">
+          <h4 data-i18n="portal.about.theory">📖 理论来源</h4>
+          <p data-i18n="portal.about.theory.desc"></p>
+        </div>
+        <div class="about-item">
+          <h4 data-i18n="portal.about.principle">🎯 设计原则</h4>
+          <p data-i18n="portal.about.principle.desc"></p>
+        </div>
+        <div class="about-item">
+          <h4 data-i18n="portal.about.stack">🛠️ 技术栈</h4>
+          <p data-i18n="portal.about.stack.desc"></p>
+        </div>
+        <div class="about-item">
+          <h4 data-i18n="portal.about.data">📦 数据集</h4>
+          <p data-i18n="portal.about.data.desc"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== 底部 ========== -->
+  <footer>
+    <p data-i18n-html="footer.copyright">© 2026 《可视化导论》课程 · 中国石油大学（华东）· 授课教师：<a href="https://cinger007.github.io" target="_blank" rel="noopener" class="teacher-link">李昕</a> · 主要参考教材：陈为《可视化导论》</p>
+    <p class="footer-meta" data-i18n="footer.meta">零依赖 · D3.js v7 · 部署于 GitHub Pages</p>
+  </footer>
+
+  <!-- 学习进度重置按钮 -->
+  <button id="reset-progress" title="重置学习进度">↻</button>
+
+</body>
+</html>
