@@ -22,7 +22,6 @@ const I18N = {
     'nav.lang.zh': '中',
     'nav.lang.en': 'EN',
     'nav.lang.label': '切换语言',
-    'nav.toc': '章节目录',
 
     // === Tab 按钮 ===
     'tab.explain': '📖 讲解',
@@ -59,12 +58,12 @@ const I18N = {
     // === 章节标题（lesson-02 流程）===
     'sec-02-1.title': '2.1 数据可视化流程',
     'sec-02-1.subtitle': '从「拿到一张表」到「画出一张图」的完整链路',
-    'sec-02-2.title': '2.2 数据变换：原数据 → 数据表',
-    'sec-02-2.subtitle': 'Card 模型 D→T 阶段：清洗、聚合、连接、派生',
-    'sec-02-3.title': '2.3 视觉映射：数据表 → 视觉结构',
-    'sec-02-3.subtitle': 'Mackinlay 通道排名 + 图元/通道 + 树布局实例',
-    'sec-02-4.title': '2.4 视图渲染与用户交互',
-    'sec-02-4.subtitle': '视觉结构 → 视图渲染 + 动画 + 事件反馈循环',
+    'sec-02-2.title': '2.2 数据分类树（d3.rollup 多层聚合）',
+    'sec-02-2.subtitle': '把"按专业分"变成"按维度组合分"',
+    'sec-02-3.title': '2.3 树布局（Reingold-Tilford 算法）',
+    'sec-02-3.subtitle': '层级数据 → 屏幕坐标的算法核心',
+    'sec-02-4.title': '2.4 树形列表渲染（classed + 事件委托）',
+    'sec-02-4.subtitle': '把树画成可折叠的 HTML 列表，处理点击、冒泡、委托三个坑',
 
     // === 章节标题（lesson-03 色彩）===
     'sec-03-1.title': '3.1 颜色模型基础',
@@ -110,32 +109,6 @@ const I18N = {
 
     // === Portal 主页 ===
     'portal.title': '《可视化导论》',
-    'footer.meta': '零依赖 · D3.js v7 · 部署于 WorkBuddy Sites',
-
-    'footer.copyright': '© 2026 《可视化导论》课程 · 中国石油大学（华东）· 授课教师：<a href="https://cinger007.github.io" target="_blank" rel="noopener" class="teacher-link">李昕</a> · 主要参考教材：陈为《可视化导论》',
-
-    'portal.cards.color-bold': '颜色是可视化基础',
-
-    'portal.cards.source-prefix': '独立专题：',
-
-    'portal.cta.enter3': '进入专题 →',
-
-    'portal.cta.enter1': '进入章节 →',
-
-    'portal.nav.about': 'ℹ️ 关于',
-
-    'portal.nav.howto': '▶️ 使用方式',
-
-    'portal.nav.chapters': '📚 章节',
-
-    'portal.hero.meta': '中国石油大学（华东）· 授课教师：<a href="https://cinger007.github.io" target="_blank" rel="noopener" class="teacher-link">李昕</a> · 主要参考教材：陈为《可视化导论》',
-
-    'portal.hero.subtitle': '从数据到图表：JavaScript + D3.js 实战课程',
-
-    'portal.hero.tag': 'VISUALIZATION · INTRODUCTION',
-
-    'portal.hero.h1': '《可视化导论》',
-
     'portal.tagline': '课程章节',
     'portal.intro': '点击任一卡片进入该章节，每章节含 3 个 tab：📖 讲解 / ⌨️ 关键代码 / ▶️ 演示。',
     'portal.section.usage': '使用方式',
@@ -192,7 +165,6 @@ const I18N = {
     'nav.lang.zh': '中',
     'nav.lang.en': 'EN',
     'nav.lang.label': 'Switch language',
-    'nav.toc': 'Table of Contents',
 
     // === Tabs ===
     'tab.explain': '📖 Explain',
@@ -229,12 +201,12 @@ const I18N = {
     // === Lesson 02: Workflow ===
     'sec-02-1.title': '2.1 Visualization Workflow',
     'sec-02-1.subtitle': 'Full pipeline: raw table → final chart',
-    'sec-02-2.title': '2.2 Data Transformation: Raw → Data Table',
-    'sec-02-2.subtitle': 'Card model D→T stage: cleaning, aggregation, join, derive',
-    'sec-02-3.title': '2.3 Visual Mapping: Data → Visual Structure',
-    'sec-02-3.subtitle': "Mackinlay's channel ranking + marks/channels + tree layout example",
-    'sec-02-4.title': '2.4 View Rendering & User Interaction',
-    'sec-02-4.subtitle': 'Visual structure → view rendering + animation + interaction feedback loop',
+    'sec-02-2.title': '2.2 Hierarchical Rollup (d3.rollup)',
+    'sec-02-2.subtitle': 'From "by-major" grouping to multi-dimensional rollup',
+    'sec-02-3.title': '2.3 Tree Layout (Reingold-Tilford)',
+    'sec-02-3.subtitle': 'Algorithm core: hierarchical data → screen coords',
+    'sec-02-4.title': '2.4 Collapsible Tree List (classed + delegation)',
+    'sec-02-4.subtitle': '3 pitfalls: click, bubbling, event delegation',
 
     // === Lesson 03: Color ===
     'sec-03-1.title': '3.1 Color Model Basics',
@@ -280,19 +252,6 @@ const I18N = {
 
     // === Portal home ===
     'portal.title': 'Introduction to Visualization',
-    'footer.meta': 'Zero dependencies · D3.js v7 · Deployed on WorkBuddy Sites',
-    'footer.copyright': '© 2026 Introduction to Visualization Course · China University of Petroleum (Huadong) · Instructor: <a href="https://cinger007.github.io" target="_blank" rel="noopener" class="teacher-link">Li Xin</a> · Main reference: Chen Wei’s 《Introduction to Visualization》',
-    'portal.cards.color-bold': 'Color is the foundation of visualization',
-    'portal.cards.source-prefix': 'Standalone topic:',
-    'portal.cta.enter3': 'Open Topic →',
-    'portal.cta.enter1': 'Open Chapter →',
-    'portal.nav.about': 'ℹ️ About',
-    'portal.nav.howto': '▶️ How to Use',
-    'portal.nav.chapters': '📚 Chapters',
-    'portal.hero.meta': 'China University of Petroleum (Huadong) · Instructor: <a href="https://cinger007.github.io" target="_blank" rel="noopener" class="teacher-link">Li Xin</a> · Main reference: Chen Wei’s 《Introduction to Visualization》',
-    'portal.hero.subtitle': 'From Data to Charts: A Hands-on JavaScript + D3.js Course',
-    'portal.hero.h1': 'Introduction to Visualization',
-    'portal.hero.tag': 'VISUALIZATION · INTRODUCTION',
     'portal.tagline': 'Course Chapters',
     'portal.intro': 'Click any card to enter a chapter. Each chapter has 3 tabs: 📖 Explain / ⌨️ Key Code / ▶️ Demo.',
     'portal.section.usage': 'How to Use',
@@ -395,8 +354,6 @@ function applyLocale(loc) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (!key) return;
-    // ⚠️ demo-mount 由 lesson.js 在 init 之后渲染 demo 内容，绝不能被 i18n 把 innerHTML 清空回"加载中…"
-    if (el.classList && el.classList.contains('demo-mount')) return;
     const v = t(key);
     if (v) el.textContent = v;
   });
@@ -416,26 +373,10 @@ function applyLocale(loc) {
     if (v) el.setAttribute('placeholder', v);
   });
 
-  // 3.5 替换 [data-i18n-html] innerHTML（带链接的混合内容）
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.getAttribute('data-i18n-html');
-    if (!key) return;
-    if (el.classList && el.classList.contains('demo-mount')) return;
-    const v = t(key);
-    if (v) el.innerHTML = v;
-  });
-
   // 4. 切换按钮高亮
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
     const lang = btn.getAttribute('data-lang-btn');
     btn.classList.toggle('active', lang === loc);
-  });
-
-  // 4.5 切换 [data-lang] 双语正文节点（方案 B 双 DOM）
-  // 中文节点 data-lang="zh-CN" 仅在中文模式显示；英文节点 data-lang="en-US" 仅在英文模式显示
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    const lang = el.getAttribute('data-lang');
-    el.hidden = (lang === 'en-US') !== (loc === 'en-US');
   });
 
   // 5. 切换 [data-i18n-href] 节点的 href（"完整讲义" markdown 自动切中英文）
